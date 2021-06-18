@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 //average
 float average(int [], int length){
 
