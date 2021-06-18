@@ -1,15 +1,5 @@
 #include <stdio.h>
 
-/*Average*/
-
-float average(int a[],int num){
-  int sum=0;
-  for (int i=0;i<num;i++)
-      sum += a[i];
-  sum=sum/num;
-  return sum;
-}
-
 /*Maximum*/
 
 int max(int a[],int num){
@@ -20,7 +10,6 @@ int max(int a[],int num){
   }
   return max;
 }
-
 /*Minimum*/
 
 int min(int a[],int num){
@@ -30,6 +19,15 @@ int min(int a[],int num){
       min=a[i];
   }
   return min;
+}
+/*Average*/
+
+float average(int a[],int num){
+  int sum=0;
+  for (int i=0;i<num;i++)
+      sum += a[i];
+  sum=sum/num;
+  return sum;
 }
 
 /*Mode*/
