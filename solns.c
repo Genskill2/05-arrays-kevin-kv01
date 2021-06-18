@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 //average
 float average(int [], int length){
 
@@ -13,7 +11,6 @@ avg = total/length;
 }
 return avg;
 }
-
  //factors
  int factors(int num,int nos[]){
   int i,fact=0;
@@ -26,8 +23,6 @@ return avg;
   }
   return fact;
 }
-
-
 //max
   int max(int num[], int length){
 
@@ -40,8 +35,6 @@ a = num[i];
 }
 return a;
 }
-
-
 //min
 int min(int num[], int length){
 int a;
@@ -55,8 +48,6 @@ a = num[i];
 }
 return a;
 }
-
-
 // mode
 int mode(int num[], int length){	
 int x=0, value=0;
