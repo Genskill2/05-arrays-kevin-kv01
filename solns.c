@@ -1,63 +1,80 @@
 #include <stdio.h>
-/*Average*/
 
-float average(int a[],int num){
-  int sum=0;
-  for (int i=0;i<num;i++)
-      sum += a[i];
-  sum=sum/num;
-  return sum;
+// average
+float average(int [], int length){
+
+float avg,total = 0;
+
+for(int i = 0; i<length; i++){
+
+total = total + num[i];
+avg = total/length;
+}
+return avg;
 }
 
-/*Maximum*/
 
-int max(int a[],int num){
-  int max= 0;
-  for (int i=0;i<num;i++){
-    if(max < a[i])
-      max=a[i];
-  }
-  return max;
-}
-
-/*Minimum*/
-
-int min(int a[],int num){
-  int i=0,min=a[i];
-  for(i;i<num;i++){
-    if(a[i]<min)
-      min=a[i];
-  }
-  return min;
-}
-
-/*Mode*/
-
-int mode(int a[],int num){
-  int modenum,moden=0,mode;
-  for(int i=0;i<num;i++){
-    modenum =0;
-    for(int j=0;j<num;j++){
-      if(a[i] ==a[j])
-        modenum++;
-    }
-    if(moden<modenum)
-      mode =a[i];
-    moden=modenum;  
-    }
-    return(mode);
-}
-
-/*Factors*/
-
-int factors(int num,int a[]){
-  int acc=0;
-  for(int i=2;i<=num;i++){
+ // factors
+ int factors(int num,int nos[]){
+  int i,fact=0;
+  for(i=2;i<=num;i++){
       while(num%i==0){
         num=num/i;
-        a[acc] = i;
-        acc ++;
+        nos[fact] = i;
+        fact = fact + 1;
       }
   }
-  return acc;
+  return fact;
+}
+
+//maximum
+  int max(int num[], int length){
+
+int a = num[0];
+
+for(int i = 0; i<length; i++){
+if(num[i] > a){
+a = num[i];
+}
+}
+return a;
+}
+
+//minimum
+int min(int num[], int length){
+int a;
+a = num[0];
+
+for(int i = 0; i<length; i++){
+if(num[i] < a){
+
+a = num[i];
+}
+}
+return a;
+}
+
+
+//mode
+int mode(int num[], int length)
+{	
+int x=0, value=0;
+
+for(int i=0;i<length;i++)
+{
+int counts=0;
+
+  for(int j=0;j<length;j++){
+  {
+     if(num[j]==num[i])
+     counts = counts + 1;
+  }
+  if(counts>x)
+   {
+      x=counts;
+      value=num[i];
+   }
+return value;
+}
+}
 }
